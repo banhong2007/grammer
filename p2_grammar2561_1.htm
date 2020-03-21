@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
 
 <title>
-Primary 2 Grammar Exam - Term 1 
+Primary 2 Grammar Exam - Term 1 (2561)
 </title>
 
 <!-- Made with executable version 6.3 Release 0 Build 5 -->
@@ -113,7 +113,7 @@ button{
 	border-radius: 5px;
 	padding: 4px 17px;
 	margin:2px;
-
+/* Stan_Rounded buttons  END*/
 }
 
 button:link,
@@ -582,7 +582,7 @@ div.ShortAnswer{
 
 	padding: 3px 6px 3px 6px;
 	cursor: pointer;
-	
+/* Stan Button Shadow Dec 4 2012*/	
 	box-shadow: 2px 2px 5px #888;
 
 }
@@ -605,7 +605,7 @@ div.ShortAnswer{
 
 	
 	box-shadow: -2px -2px 5px #888;
-
+/* Stan Button Shadow end  Dec 4 2012*/
 }
 
 .FuncButtonDown {
@@ -629,7 +629,7 @@ div.ShortAnswer{
 
 }
 
-
+/*BeginNavBarStyle*/
 
 div.NavButtonBar{
 	background-color: #004040;
@@ -639,10 +639,10 @@ div.NavButtonBar{
 	clear: both;
 	font-size: 100%;
 
-
+/* Stan Rounded corner of Nav Bar 	*/
 	border-radius: 5px;
 
-
+/* Stan NavBar Shadow Dec 6 2012 	*/
 	box-shadow: -2px -2px 5px #888;
 
 padding:1px;
@@ -660,7 +660,7 @@ padding:1px;
 
 
 	cursor: pointer;	
-
+/* Stan Shadow on buttons Dec 4 2012 	*/
 	box-shadow: 2px 2px 5px #002020;
 
 }
@@ -697,7 +697,7 @@ padding:1px;
 	
 }
 
-
+/*EndNavBarStyle*/
 
 a{
 	color: #0000FF;
@@ -2013,7 +2013,7 @@ function ShowHideQuestions(){
 		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
 		ShowingAllQuestions = false;	
 	}
-	document.getElementById('ShowMethodButton').style.display = 'inline';
+	document.getElementById('ShowMethodButton').style.display = 'none';
 }
 
 function CreateStatusArray(){
@@ -2056,7 +2056,6 @@ function CheckMCAnswer(QNum, ANum, Btn){
 //Show the feedback
 		ShowMessage(Feedback);
 //New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
-//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
 		return;
 	}
 	
@@ -2141,6 +2140,8 @@ function CheckMCAnswer(QNum, ANum, Btn){
 	
 //Check whether all questions are now done
 	CheckFinished();
+if (Btn.innerHTML == CorrectIndicator )	{ChangeQ(1);}
+
 }
 
 function CalculateMCQuestionScore(QNum){
@@ -2352,7 +2353,7 @@ function CheckFinished(){
 <!-- EndTopNavButtons -->
 
 <div class="Titles">
-	<h2 class="ExerciseTitle">Primary 2 Grammar Exam - Term 1 </h2>
+	<h2 class="ExerciseTitle">Primary 2 Grammar Exam - Term 1 (2561)</h2>
 
 	<h3 class="ExerciseSubtitle">Multiple Choice</h3>
 
@@ -2372,7 +2373,7 @@ function CheckFinished(){
 <div id="QNav" class="QuestionNavigation">
 
 <p style="text-align: right;">
-<button id="ShowMethodButton" class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOver(this)" onclick="ShowHideQuestions(); return false;">Show all questions</button>
+
 </p>
 
 <div id="OneByOneReadout">
