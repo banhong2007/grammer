@@ -274,8 +274,8 @@ outline:none;
 
 div.Feedback {
 	background-color: #008040;
-	left: 33%;
-	width: 34%;
+	left: 40%;
+	width: 20%;
 	top: 33%;
 	z-index: 1;
 	border-style: solid;
@@ -1458,7 +1458,7 @@ function Shuffle(InArray){
 
 	for (i=0; i<Len; i++){
 		Num = Math.floor(j  *  Math.random());
-		InArray[i] = Temp[Num];
+		// InArray[i] = Temp[Num]; 
 
 		for (var k=Num; k < (j-1); k++) {
 			Temp[k] = Temp[k+1];
